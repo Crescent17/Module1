@@ -8,8 +8,16 @@ public class Task10 {
         int rows = scanner.nextInt();
         System.out.print("Enter the number of columns: ");
         int columns = scanner.nextInt();
-        System.out.println("Enter \"n\" value");
-        int n = scanner.nextInt();
+        System.out.println("Enter \"n\" value (must be even)");
+        int n = 0;
+        while (true) {
+            n = scanner.nextInt();
+            if (n % 2 == 0) {
+                break;
+            } else {
+                System.out.println("It's not even. Try again");
+            }
+        }
         int[][] array = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
